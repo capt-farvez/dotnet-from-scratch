@@ -217,14 +217,3 @@ File.WriteAllText("test.txt", "Hello, C#!");
 string text = File.ReadAllText("test.txt");
 Console.WriteLine(text);
 ```
-
----
-
-## **🔟 Advanced Topics to Explore Next**
-- **ASP.NET Core** (Web Development)  
-- **Entity Framework Core** (Database Handling)  
-- **Blazor** (Frontend UI in C#)  
-- **Multithreading & Async Programming**  
-- **Unit Testing in C#**  
-
----
