@@ -4,7 +4,7 @@ class Fruits
     public int Quantity { get; set; }
 }
 
-class LINQ 
+class LINQ_Where
 {
     public static void Where()
     {
