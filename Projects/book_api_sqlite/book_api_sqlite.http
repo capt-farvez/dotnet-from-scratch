@@ -1,0 +1,6 @@
+@book_api_sqlite_HostAddress = http://localhost:5154
+
+GET {{book_api_sqlite_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
