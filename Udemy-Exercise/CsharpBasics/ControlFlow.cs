@@ -16,6 +16,22 @@
     program should display Ok on the console. If the value is above the speed limit, the program should calculate 
     the number of demerit points. For every 5km/hr above the speed limit, 1 demerit points should be incurred and 
     displayed on the console. If the number of demerit points is above 12, the program should display License Suspended.
+
+    5- Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder. Display the count on the console.
+
+    6- Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers 
+    and display it on the console.
+
+    7- Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. 
+    For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+
+    8 - Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number. 
+    If the user guesses the number, display “You won"; otherwise, display “You lost". 
+    (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+
+    9 - Write a program and ask the user to enter a series of numbers separated by comma. 
+    Find the maximum of the numbers and display it on the console. For example, 
+    if the user enters “5, 3, 8, 1, 4", the program should display 8.
 */
 
 namespace ControlFlow
@@ -97,6 +113,100 @@ namespace ControlFlow
                     Console.WriteLine("License Suspended");
                 }
             }
+        }
+        public static void Ex5()
+        {
+            int count = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine($"Count of numbers between 1 and 100 that are divisible by 3: {count}");
+        }
+
+        public static void Ex6()
+        {
+            int sum = 0;
+            while (true)
+            {
+                Console.Write("Enter a number (or type 'ok' to exit): ");
+                string input = Console.ReadLine();
+                if (input.ToLower() == "ok")
+                {
+                    break;
+                }
+                else
+                {
+                    int number;
+                    if (int.TryParse(input, out number))
+                    {
+                        sum += number;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                    }
+                }
+            }
+            Console.WriteLine($"Sum of all entered numbers: {sum}");
+        }
+
+        public static void Ex7()
+        {
+            Console.Write("Enter a number to compute its factorial: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int factorial = 1;
+
+            for (int i = 1; i <= number; i++)
+            {
+                factorial *= i;
+            }
+            Console.WriteLine($"{number}! = {factorial}");
+        }
+
+        public static void Ex8()
+        {
+            Random random = new Random();
+            int secretNumber = random.Next(1, 11);
+            Console.WriteLine($"Secret Number (for testing): {secretNumber}");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.Write("Guess the number (between 1 and 10): ");
+                int guess = Convert.ToInt32(Console.ReadLine());
+                if (guess == secretNumber)
+                {
+                    Console.WriteLine("You won!");
+                    return;
+                }
+            }
+            Console.WriteLine("You lost.");
+        }
+
+        public static void Ex9()
+        {
+            Console.Write("Enter a series of numbers separated by commas: ");
+            string input = Console.ReadLine();
+            string[] numbers = input.Split(',');
+            int maxNumber = int.MinValue;
+
+            foreach (string number in numbers)
+            {
+                if (int.TryParse(number.Trim(), out int num))
+                {
+                    if (num > maxNumber)
+                    {
+                        maxNumber = num;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid number: {number}");
+                }
+            }
+            Console.WriteLine($"Maximum number is: {maxNumber}");
         }
     }
 }
