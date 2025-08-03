@@ -26,17 +26,29 @@ namespace CsharpBasics
             // Console.WriteLine("\n 9. Find Maximum Number");
             // ControlFlow.ControlFlow.Ex9();
 
-            Console.WriteLine("\n------------------ Array and List Exercises ------------------");
-            Console.WriteLine(" 1. Facebook Likes Simulation");
-            ArrayAndList.ArrayAndList.Ex1();
-            Console.WriteLine("\n 2. Reverse Name");
-            ArrayAndList.ArrayAndList.Ex2();
-            Console.WriteLine("\n 3. Unique Number Entry");
-            ArrayAndList.ArrayAndList.Ex3();
-            Console.WriteLine("\n 4. Unique Number List");
-            ArrayAndList.ArrayAndList.Ex4();
-            Console.WriteLine("\n 5. Smallest Numbers");
-            ArrayAndList.ArrayAndList.Ex5();
+            // Console.WriteLine("\n------------------ Array and List Exercises ------------------");
+            // Console.WriteLine(" 1. Facebook Likes Simulation");
+            // ArrayAndList.ArrayAndList.Ex1();
+            // Console.WriteLine("\n 2. Reverse Name");
+            // ArrayAndList.ArrayAndList.Ex2();
+            // Console.WriteLine("\n 3. Unique Number Entry");
+            // ArrayAndList.ArrayAndList.Ex3();
+            // Console.WriteLine("\n 4. Unique Number List");
+            // ArrayAndList.ArrayAndList.Ex4();
+            // Console.WriteLine("\n 5. Smallest Numbers");
+            // ArrayAndList.ArrayAndList.Ex5();
+
+            Console.WriteLine("\n------------------ String/Text Exercises ------------------");
+            Console.WriteLine(" 1. Consecutive Numbers Check");
+            StringText.StringText.Ex1();
+            Console.WriteLine("\n 2. Duplicate Numbers Check");
+            StringText.StringText.Ex2();
+            Console.WriteLine("\n 3. Time Validation");
+            StringText.StringText.Ex3();
+            Console.WriteLine("\n 4. Variable Name Generator");
+            StringText.StringText.Ex4();
+            Console.WriteLine("\n 5. Vowel Counter");
+            StringText.StringText.Ex5();
         }
     }
 }
